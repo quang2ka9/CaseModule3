@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<style>
+    * {
+        background-color: rgb(248, 241, 233);
+        width: 91%;
+        margin-left: 63px;
+
+    }
+
+    .transaction-form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px 0 rgba(51, 62, 73, .1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input[type="date"],
+    input[type="text"],
+    input[type="number"] {
+        display: block;
+        width: 95%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ced4da;
+        box-shadow: 0 2px 5px 0 rgba(51, 62, 73, .1);
+        border-radius: 5px;
+        background-color: #fff;
+        color: #495057;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    input[type="date"]:focus,
+    input[type="text"]:focus,
+    input[type="number"]:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+
+    button {
+        margin: 20px;
+    }
+
+    .custom-btn {
+        width: 130px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+        outline: none;
+    }
+
+    .btn-12 {
+        position: relative;
+        right: 20px;
+        bottom: 20px;
+        border: none;
+        box-shadow: none;
+        width: 130px;
+        height: 40px;
+        margin-left: 130px;
+        line-height: 42px;
+        -webkit-perspective: 230px;
+        perspective: 230px;
+    }
+
+    .btn-12 span {
+        background: rgb(0, 172, 238);
+        background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+        display: block;
+        position: absolute;
+        width: 130px;
+        height: 40px;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+        border-radius: 5px;
+        margin: 0;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .btn-12 span:nth-child(1) {
+        box-shadow: -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+        -webkit-transform: rotateX(90deg);
+        -moz-transform: rotateX(90deg);
+        transform: rotateX(90deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12 span:nth-child(2) {
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: 50% 50% -20px;
+        -moz-transform-origin: 50% 50% -20px;
+        transform-origin: 50% 50% -20px;
+    }
+
+    .btn-12:hover span:nth-child(1) {
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+
+    .btn-12:hover span:nth-child(2) {
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+        color: transparent;
+        -webkit-transform: rotateX(-90deg);
+        -moz-transform: rotateX(-90deg);
+        transform: rotateX(-90deg);
+    }
+    .h1{
+        text-align: center;
+    }
+
+</style>
+
+<body>
+
+<h1 class="h1">Sửa sản phẩm</h1>
+
+<form action="" method="post">
+
+    <div class="form-group">
+        <label>Tên sản phẩm</label>
+        <input type="text" name="ProductName" value="{ProductName}">
+    </div>
+
+    <div class="form-group">
+        <label>Giá sản phẩm</label>
+        <input type="text" name="Price" value="{Price}">
+    </div>
+
+    <div class="form-group">
+        <label>Số lượng sản phẩm</label>
+        <input type="text" name="Quantity" value="{Quantity}">
+    </div>
+
+    <div class="form-group">
+        <label>Giảm giá</label>
+        <input type="text" name="discount" value="{discount}">
+    </div>
+
+    <div class="form-group">
+        <label>Xuất sứ</label>
+        <input type="text" name="origin" value="{origin}">
+    </div>
+
+    <div class="form-group">
+        <label>Ảnh sản phẩm</label>
+        <input type="text" id="Image" name="Image" value="{Image}">
+        <div id="imgDiv"></div>
+        <input type="file" id="fileButton" onchange="uploadImage(event)"><br>
+    </div>
+
+    <div class="form-group">
+        <label>Mô tả</label>
+        <input type="text" name="productDescription" value="{productDescription}">
+    </div>
+
+    <div class="form-group">
+        <select name="categoryId">
+            {categories}
+        </select>
+    </div>
+
+        <button type="submit" class="custom-btn btn-12"><span>Lưu!</span><span>Nhấn</span></button>
+        <a href="/home" style="text-decoration: none ; margin-left: 90%">Thoát</a>
+</form>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyDxG2vMNkqz1sf4UGAaMzcaq3lVdAN5C8M",
+        authDomain: "users-8f542.firebaseapp.com",
+        projectId: "users-8f542",
+        storageBucket: "users-8f542.appspot.com",
+        messagingSenderId: "351740883393",
+        appId: "1:351740883393:web:b9c6a3bba9f040cf3ebf40",
+        measurementId: "G-KN5Q9HHHL7"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<script type="text/javascript">
+    function uploadImage(e) {
+        let fbBucketName = 'images';
+        let uploader = document.getElementById('uploader');
+        let file = e.target.files[0];
+        let storageRef = firebase.storage().ref(`${fbBucketName}/${file.name}`);
+        let uploadTask = storageRef.put(file);
+        uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
+            function (snapshot) {
+                uploader.value = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                switch (snapshot.state) {
+                    case firebase.storage.TaskState.PAUSED:
+                        break;
+                    case firebase.storage.TaskState.RUNNING:
+                        break;
+                }
+            }, function (error) {
+                switch (error.code) {
+                    case 'storage/unauthorized':
+                        break;
+                    case 'storage/canceled':
+                        break;
+                    case 'storage/unknown':
+                        break;
+                }
+            }, function () {
+                let downloadURL = uploadTask.snapshot.downloadURL;
+                console.log(downloadURL);
+                document.getElementById('imgDiv').innerHTML = `<img height="200px", width="200px" src="${downloadURL}" alt="">`
+                document.getElementById('Image').value = downloadURL;
+            });
+    }
+</script>
+</body>
+</html>
+
